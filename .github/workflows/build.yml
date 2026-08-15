@@ -63,5 +63,5 @@ jobs:
             - **ModVersion:** ${{ env.MOD_VERSION }}
             - **ModDll:** P5S.ReShade.dll
 
-            Attached: `P5S.ReShade.7z` — download it and drag 'n drop it onto the Reloaded-II Launcher window to install.
+            Attached: `P5S.ReShade.7z` — download it and drag and drop it onto the Reloaded-II Launcher window to install.
           files: P5S.ReShade.7z
