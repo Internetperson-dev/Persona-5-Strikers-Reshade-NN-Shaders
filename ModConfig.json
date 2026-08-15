@@ -1,0 +1,35 @@
+{
+  "ModId": "p5s.reshade.nnaa",
+  "ModName": "P5S ReShade NN Shaders",
+  "ModAuthor": "Internetperson-dev",
+  "ModVersion": "1.0.0",
+  "ModDescription": "ReShade 6 with NN shaders (CMAA2) for Persona 5 Strikers. Copies the ReShade DLLs and shader files into the game folder when enabled.",
+  "ModDll": "P5S.ReShade.dll",
+  "ModIcon": "Preview.png",
+  "ModR2RManagedDll32": "",
+  "ModR2RManagedDll64": "",
+  "ModNativeDll32": "",
+  "ModNativeDll64": "",
+  "IsLibrary": false,
+  "ReleaseMetadataFileName": "P5S.ReShade.ReleaseMetadata.json",
+  "PluginData": {},
+  "IsUniversalMod": false,
+
+  "ModDependencies": [],
+
+  "OptionalDependencies": [],
+
+  "SupportedAppId": [
+    "game.exe"
+  ],
+
+  "GameBananaDependencies": {
+    "IdToConfigMap": {}
+  },
+
+  "GitHubDependencies": {
+    "IdToConfigMap": {}
+  },
+
+  "ProjectUrl": "https://github.com/Internetperson-dev/Persona-5-Strikers-Reshade-NN-Shaders"
+}
