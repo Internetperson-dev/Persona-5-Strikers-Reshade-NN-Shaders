@@ -16,9 +16,9 @@ It does nothing else — no hooks, no configuration UI, no native code.
 
 ## Install
 
-1. Grab the `P5S.ReShade.zip` from the latest [GitHub Release](https://github.com/Internetperson-dev/Persona-5-Strikers-Reshade-NN-Shaders/releases) (or build locally, see below).
-2. Extract the `publish/` contents into your Reloaded-II `Mods` folder so you get `Mods/P5S.ReShade/ModConfig.json`.
-3. Open the Reloaded-II Launcher, go to **Game** → **Persona 5 Strikers**, and enable **P5S ReShade NN Shaders**.
+1. Grab `P5S.ReShade.7z` from the latest [GitHub Release](https://github.com/Internetperson-dev/Persona-5-Strikers-Reshade-NN-Shaders/releases) (or build locally, see below).
+2. Drag the `.7z` file onto the Reloaded-II Launcher window and drop it. It installs itself into your `Mods` folder automatically.
+3. In the Launcher, go to **Game** → **Persona 5 Strikers**, and enable **P5S ReShade NN Shaders**.
 4. Launch the game from the Launcher. The mod copies the ReShade files into the game folder and ReShade loads.
 
 > To remove the mod, disable it in the Launcher and delete the files it deployed (`d3d11.dll`, `d3dcompiler_47.dll`, `ReShade.ini`, `ReShadePreset.ini`, `ReShade_shaders/`, `ReShade_cache/`) from your game folder. Disabling the mod alone does not delete them.
@@ -35,4 +35,4 @@ $env:RELOADEDIIMODS = "C:\path\to\Reloaded-II - P5S\Mods"
 dotnet build P5S.ReShade.csproj -c Release
 ```
 
-CI builds (GitHub Actions) publish a ready-to-use `publish/` folder, a `P5S.ReShade.zip`, and create a new GitHub Release for every build (versioned `1.0.<run number>`).
+CI builds (GitHub Actions) publish a ready-to-use `publish/` folder and create a new GitHub Release for every build (versioned `1.0.<run number>`), attaching a `P5S.ReShade.7z` that can be drag 'n dropped straight into the Reloaded-II Launcher.

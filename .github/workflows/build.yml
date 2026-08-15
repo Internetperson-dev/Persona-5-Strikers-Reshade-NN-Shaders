@@ -36,16 +36,20 @@ jobs:
       - name: Publish mod
         run: dotnet publish P5S.ReShade.csproj -c Release -o publish
 
-      - name: Package mod as zip
-        run: Compress-Archive -Path publish\* -DestinationPath P5S.ReShade.zip
+      - name: Package mod as 7z
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force ModOutput\P5S.ReShade | Out-Null
+          Copy-Item -Path publish\* -Destination ModOutput\P5S.ReShade -Recurse -Force
+          Push-Location ModOutput
+          & "C:\Program Files\7-Zip\7z.exe" a -mx=9 ..\P5S.ReShade.7z P5S.ReShade
+          Pop-Location
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: P5S.ReShade
-          path: |
-            publish/
-            P5S.ReShade.zip
+          path: publish/
 
       - name: Create Release
         if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
@@ -59,5 +63,5 @@ jobs:
             - **ModVersion:** ${{ env.MOD_VERSION }}
             - **ModDll:** P5S.ReShade.dll
 
-            Attached: `P5S.ReShade.zip` — extract the `publish/` contents into your Reloaded-II `Mods` folder.
-          files: P5S.ReShade.zip
+            Attached: `P5S.ReShade.7z` — download it and drag 'n drop it onto the Reloaded-II Launcher window to install.
+          files: P5S.ReShade.7z
