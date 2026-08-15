@@ -3,7 +3,7 @@
   "ModName": "P5S ReShade NN Shaders",
   "ModAuthor": "Internetperson-dev",
   "ModVersion": "1.0.0",
-  "ModDescription": "ReShade 6 with NN shaders (CMAA2) for Persona 5 Strikers. Copies the ReShade DLLs and shader files into the game folder when enabled.",
+  "ModDescription": "ReShade 6 with NN shaders (CMAA2) for Persona 5 Strikers. Copies the ReShade DLLs and shader files into the game folder when enabled and removes them again when the game exits.",
   "ModDll": "P5S.ReShade.dll",
   "ModIcon": "Preview.png",
   "ModR2RManagedDll32": "",
