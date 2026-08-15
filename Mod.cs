@@ -27,7 +27,6 @@ public class Mod : IDisposable
     private readonly List<string> _deployedFiles = new();
     private readonly List<string> _deployedDirectories = new();
     private bool _cleanupRequested;
-    private bool _helperSpawned;
 
     public Mod(ModContext context)
     {
@@ -148,7 +147,6 @@ public class Mod : IDisposable
             };
 
             Process.Start(startInfo);
-            _helperSpawned = true;
             _logger.WriteLine($"[P5S.ReShade] Spawned cleanup helper (PID {gamePid}); deployed files will be removed after the game exits.");
         }
         catch (Exception e)
