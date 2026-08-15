@@ -1,3 +1,5 @@
+using Reloaded.Mod.Interfaces;
+
 namespace P5S.ReShade;
 
 /// <summary>
